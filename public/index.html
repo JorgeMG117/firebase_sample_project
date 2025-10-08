@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Hosting Guide - Deploying Static Websites</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🚀 Firebase Hosting Guide</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#prerequisites">Prerequisites</a></li>
+                <li><a href="#steps">Steps</a></li>
+                <li><a href="#firebase">What is Firebase?</a></li>
+                <li><a href="#commands">Commands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview" class="hero">
+            <div class="hero-content">
+                <h2>Deploying a Static Website to Firebase Hosting</h2>
+                <p>Firebase Hosting is a fast, secure, and free (for moderate usage) platform for deploying <strong>static websites</strong> — HTML, CSS, JS, and static assets like images or JSON.</p>
+                <div class="hero-features">
+                    <div class="feature-badge">🌐 Global CDN</div>
+                    <div class="feature-badge">🔒 Free SSL</div>
+                    <div class="feature-badge">⚡ Lightning Fast</div>
+                    <div class="feature-badge">💰 Free Tier</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prerequisites" class="prerequisites">
+            <div class="container">
+                <h2>Prerequisites</h2>
+                <p>Before starting, make sure you have:</p>
+                
+                <div class="prereq-grid">
+                    <div class="prereq-card">
+                        <div class="prereq-icon">📦</div>
+                        <h3>Node.js and npm</h3>
+                        <p>Check with:</p>
+                        <code>node -v</code><br>
+                        <code>npm -v</code>
+                        <p class="prereq-note">If not installed, download from <a href="https://nodejs.org" target="_blank">nodejs.org</a></p>
+                    </div>
+                    
+                    <div class="prereq-card">
+                        <div class="prereq-icon">🔑</div>
+                        <h3>Firebase Account</h3>
+                        <p>Sign up or log in at <a href="https://firebase.google.com" target="_blank">firebase.google.com</a></p>
+                    </div>
+                    
+                    <div class="prereq-card">
+                        <div class="prereq-icon">🏗️</div>
+                        <h3>Google Project</h3>
+                        <p>You can create one during the Firebase setup process</p>
+                    </div>
+                </div>
+
+                <div class="explanation-box">
+                    <h4>What are Node.js and npm?</h4>
+                    <ul>
+                        <li><strong>Node.js</strong> is a JavaScript runtime that allows you to run JavaScript outside the browser — commonly used for building and managing web applications.</li>
+                        <li><strong>npm</strong> (Node Package Manager) is a tool that comes with Node.js and lets you install and manage JavaScript packages (like Firebase tools).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="steps" class="steps">
+            <div class="container">
+                <h2>Step-by-Step Guide</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install the Firebase CLI</h3>
+                        <p>Install the Firebase Command Line Interface globally:</p>
+                        <div class="code-block">
+                            <code>npm install -g firebase-tools</code>
+                        </div>
+                        <p>Check installation:</p>
+                        <div class="code-block">
+                            <code>firebase --version</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Login to Firebase</h3>
+                        <p>Authenticate your CLI with your Google account:</p>
+                        <div class="code-block">
+                            <code>firebase login</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Initialize Your Project</h3>
+                        <p>Navigate to your website's folder and initialize Firebase Hosting:</p>
+                        <div class="code-block">
+                            <code>cd path/to/your/project</code><br>
+                            <code>firebase init</code>
+                        </div>
+                        <div class="step-details">
+                            <h4>Follow the prompts:</h4>
+                            <ol>
+                                <li>Select <strong>Hosting: Set up deployments for static web apps</strong></li>
+                                <li>Create a Firebase project</li>
+                                <li>Set the <strong>public directory</strong> (e.g., <code>public</code>)</li>
+                                <li>Say no to single-page app</li>
+                                <li>Skip GitHub deploys for now</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Add Your Website Files</h3>
+                        <p>Ensure your site files are in the chosen <strong>public directory</strong>:</p>
+                        <div class="file-structure">
+                            <pre>my-website/
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+├── firebase.json
+└── .firebaserc</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Preview Locally</h3>
+                        <div class="code-block">
+                            <code>firebase serve</code>
+                        </div>
+                        <p>or</p>
+                        <div class="code-block">
+                            <code>firebase emulators:start</code>
+                        </div>
+                        <p>Visit <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> to preview.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Deploy to Firebase</h3>
+                        <div class="code-block">
+                            <code>firebase deploy</code>
+                        </div>
+                        <div class="output-example">
+                            <h4>Output example:</h4>
+                            <pre>✔ Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/myproject
+Hosting URL: https://myproject.web.app</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Set Up a Custom Domain (Optional)</h3>
+                        <ol>
+                            <li>Go to Firebase Console → Hosting</li>
+                            <li>Click "Add custom domain"</li>
+                            <li>Follow DNS setup instructions</li>
+                            <li>Firebase provides free SSL automatically</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="firebase" class="firebase-explanation">
+            <div class="container">
+                <h2>What is Firebase?</h2>
+                
+                <div class="firebase-intro">
+                    <p>Firebase is a comprehensive app development platform by Google that provides a suite of tools and services to help developers build, improve, and grow their applications.</p>
+                </div>
+
+                <div class="firebase-services">
+                    <h3>Firebase Services</h3>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🌐</div>
+                            <h4>Firebase Hosting</h4>
+                            <p>Fast and secure web hosting for static content with global CDN</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🔥</div>
+                            <h4>Firebase Realtime Database</h4>
+                            <p>Cloud-hosted NoSQL database that syncs data in real-time</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🔐</div>
+                            <h4>Firebase Authentication</h4>
+                            <p>Easy-to-use authentication system with multiple providers</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">☁️</div>
+                            <h4>Firebase Cloud Functions</h4>
+                            <p>Serverless functions that run in response to events</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">📊</div>
+                            <h4>Firebase Analytics</h4>
+                            <p>Free app measurement and user engagement analytics</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🚀</div>
+                            <h4>Firebase Performance</h4>
+                            <p>Monitor app performance and identify bottlenecks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="firebase-benefits">
+                    <h3>Why Choose Firebase Hosting?</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <strong>🌍 Global CDN:</strong> Content delivered from edge locations worldwide for maximum speed
+                        </div>
+                        <div class="benefit-item">
+                            <strong>🔒 Free SSL:</strong> Automatic SSL certificates with automatic renewal
+                        </div>
+                        <div class="benefit-item">
+                            <strong>⚡ Fast Deploy:</strong> Deploy with a single command using Firebase CLI
+                        </div>
+                        <div class="benefit-item">
+                            <strong>🎯 Custom Domains:</strong> Easy DNS configuration for your own domain
+                        </div>
+                        <div class="benefit-item">
+                            <strong>📊 Analytics:</strong> Built-in analytics to track performance and usage
+                        </div>
+                        <div class="benefit-item">
+                            <strong>🔄 Version Control:</strong> Rollback to previous versions instantly
+                        </div>
+                    </div>
+                </div>
+
+                <div class="firebase-architecture">
+                    <h3>How Firebase Hosting Works</h3>
+                    <div class="architecture-diagram">
+                        <div class="arch-step">
+                            <div class="arch-icon">💻</div>
+                            <div class="arch-text">
+                                <h4>1. Development</h4>
+                                <p>Build your static website locally</p>
+                            </div>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">
+                            <div class="arch-icon">🚀</div>
+                            <div class="arch-text">
+                                <h4>2. Deploy</h4>
+                                <p>Use Firebase CLI to deploy</p>
+                            </div>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">
+                            <div class="arch-icon">🌐</div>
+                            <div class="arch-text">
+                                <h4>3. Global CDN</h4>
+                                <p>Content distributed worldwide</p>
+                            </div>
+                        </div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">
+                            <div class="arch-icon">👥</div>
+                            <div class="arch-text">
+                                <h4>4. Users</h4>
+                                <p>Fast access from anywhere</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="commands">
+            <div class="container">
+                <h2>Common Commands</h2>
+                <div class="commands-table">
+                    <div class="command-row">
+                        <div class="command">firebase init</div>
+                        <div class="description">Initialize Firebase in your project</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command">firebase serve</div>
+                        <div class="description">Preview locally</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command">firebase deploy</div>
+                        <div class="description">Deploy your site</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command">firebase login</div>
+                        <div class="description">Log into Firebase</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command">firebase logout</div>
+                        <div class="description">Log out of Firebase</div>
+                    </div>
+                    <div class="command-row">
+                        <div class="command">firebase open hosting:site</div>
+                        <div class="description">Open your live site</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="troubleshooting">
+            <div class="container">
+                <h2>Troubleshooting</h2>
+                <div class="troubleshooting-grid">
+                    <div class="trouble-item">
+                        <h4>Error: Hosting setup requires a public directory</h4>
+                        <p>→ Ensure your <code>firebase.json</code> points to the right folder.</p>
+                    </div>
+                    <div class="trouble-item">
+                        <h4>Website not updating</h4>
+                        <p>→ Try <code>firebase deploy --only hosting</code></p>
+                    </div>
+                    <div class="trouble-item">
+                        <h4>Permission denied</h4>
+                        <p>→ Log into the correct Google account.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Firebase Hosting Guide - Web Systems Course</p>
+            <p>Built with ❤️ for educational purposes</p>
+            <div class="footer-links">
+                <a href="https://firebase.google.com/docs/hosting" target="_blank">Firebase Docs</a>
+                <a href="https://console.firebase.google.com" target="_blank">Firebase Console</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+[debug] [2025-10-08T13:05:57.404Z] ----------------------------------------------------------------------
+[debug] [2025-10-08T13:05:57.405Z] Command:       /home/jorge/.nvm/versions/node/v22.13.1/bin/node /home/jorge/.nvm/versions/node/v22.13.1/bin/firebase init
+[debug] [2025-10-08T13:05:57.405Z] CLI Version:   14.19.0
+[debug] [2025-10-08T13:05:57.406Z] Platform:      linux
+[debug] [2025-10-08T13:05:57.406Z] Node Version:  v22.13.1
+[debug] [2025-10-08T13:05:57.406Z] Time:          Wed Oct 08 2025 15:05:57 GMT+0200 (Central European Summer Time)
+[debug] [2025-10-08T13:05:57.406Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jorge/SistemasWeb/slides/004_WebServersI/firebase_sample_project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-10-08T13:07:59.988Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-08T13:07:59.988Z] > authorizing via signed-in user (jorgemcatalan@gmail.com)
+[debug] [2025-10-08T13:08:51.311Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:08:51.311Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:08:51.315Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-08T13:08:51.315Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"firebase_deploy"}
+[debug] [2025-10-08T13:08:51.451Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2025-10-08T13:08:51.451Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2025-10-08T13:08:51.452Z] Couldn't check if project ID firebase_deploy is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2025-10-08T13:08:55.250Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:08:55.250Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:08:55.250Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-10-08T13:08:55.251Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"firebase_deploy","name":"firebase_deploy"}
+[debug] [2025-10-08T13:08:56.021Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2025-10-08T13:08:56.021Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"},{"field":"display_name","description":"project display name contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2025-10-08T13:08:56.023Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, Request contains an invalid argument.
+    at responseToError (/home/jorge/.nvm/versions/node/v22.13.1/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/home/jorge/.nvm/versions/node/v22.13.1/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2025-10-08T13:11:23.142Z] ----------------------------------------------------------------------
+[debug] [2025-10-08T13:11:23.143Z] Command:       /home/jorge/.nvm/versions/node/v22.13.1/bin/node /home/jorge/.nvm/versions/node/v22.13.1/bin/firebase init
+[debug] [2025-10-08T13:11:23.144Z] CLI Version:   14.19.0
+[debug] [2025-10-08T13:11:23.144Z] Platform:      linux
+[debug] [2025-10-08T13:11:23.144Z] Node Version:  v22.13.1
+[debug] [2025-10-08T13:11:23.144Z] Time:          Wed Oct 08 2025 15:11:23 GMT+0200 (Central European Summer Time)
+[debug] [2025-10-08T13:11:23.144Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jorge/SistemasWeb/slides/004_WebServersI/firebase_sample_project
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-10-08T13:11:29.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-08T13:11:29.795Z] > authorizing via signed-in user (jorgemcatalan@gmail.com)
+[debug] [2025-10-08T13:11:31.981Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:31.982Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:31.986Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-08T13:11:31.986Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"firebase-deploy-001"}
+[debug] [2025-10-08T13:11:32.397Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-08T13:11:32.397Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"fir-deploy-001"}
+[debug] [2025-10-08T13:11:40.896Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:40.896Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:40.897Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-08T13:11:40.897Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"fir-deploy-001"}
+[debug] [2025-10-08T13:11:41.192Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-08T13:11:41.193Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_AVAILABLE","suggestedProjectId":"fir-deploy-001"}
+[debug] [2025-10-08T13:11:42.620Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:42.620Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:42.620Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-10-08T13:11:42.621Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"fir-deploy-001","name":"fir-deploy-001"}
+[debug] [2025-10-08T13:11:43.587Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-10-08T13:11:43.587Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.6415607273525313882"}
+[debug] [2025-10-08T13:11:43.589Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:43.589Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:43.590Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6415607273525313882 [none]
+[debug] [2025-10-08T13:11:44.263Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6415607273525313882 200
+[debug] [2025-10-08T13:11:44.264Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6415607273525313882 {"name":"operations/create_project.global.6415607273525313882"}
+[debug] [2025-10-08T13:11:44.765Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-10-08T13:11:44.766Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:44.767Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:44.767Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6415607273525313882 [none]
+[debug] [2025-10-08T13:11:44.937Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6415607273525313882 200
+[debug] [2025-10-08T13:11:44.938Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6415607273525313882 {"name":"operations/create_project.global.6415607273525313882","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"531395247001","projectId":"fir-deploy-001","lifecycleState":"ACTIVE","name":"fir-deploy-001","createTime":"2025-10-08T13:11:27.629928Z"}}
+[debug] [2025-10-08T13:11:44.940Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:44.940Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:44.940Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/fir-deploy-001:addFirebase [none]
+[debug] [2025-10-08T13:11:48.864Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/fir-deploy-001:addFirebase 200
+[debug] [2025-10-08T13:11:48.864Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/fir-deploy-001:addFirebase {"name":"operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm"}
+[debug] [2025-10-08T13:11:48.864Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:48.865Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:48.865Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm [none]
+[debug] [2025-10-08T13:11:53.019Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm 200
+[debug] [2025-10-08T13:11:53.019Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm {"name":"operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm"}
+[debug] [2025-10-08T13:11:53.520Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-10-08T13:11:53.521Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:53.521Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:53.521Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm [none]
+[debug] [2025-10-08T13:11:54.399Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm 200
+[debug] [2025-10-08T13:11:54.399Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm {"name":"operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm"}
+[debug] [2025-10-08T13:11:55.400Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-10-08T13:11:55.400Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:55.401Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:55.401Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm [none]
+[debug] [2025-10-08T13:11:55.939Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm 200
+[debug] [2025-10-08T13:11:55.939Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm {"name":"operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm"}
+[debug] [2025-10-08T13:11:57.940Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-10-08T13:11:57.941Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:57.941Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:57.941Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm [none]
+[debug] [2025-10-08T13:11:58.422Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm 200
+[debug] [2025-10-08T13:11:58.422Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm {"name":"operations/workflows/ZGNlMjIxNDYtYzRjNS00ZGNmLTkyYTctZWJjNzBlZGJjNzBm","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"fir-deploy-001","projectNumber":"531395247001","displayName":"fir-deploy-001","name":"projects/fir-deploy-001","resources":{"hostingSite":"fir-deploy-001"}}}
+[info] 
+[info] 🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+[info] 
+[info] Project information:
+[info]    - Project ID: fir-deploy-001
+[info]    - Project Name: fir-deploy-001
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/fir-deploy-001/overview
+[info] 
+=== Hosting Setup
+[debug] [2025-10-08T13:11:58.427Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:58.427Z] Checked if tokens are valid: true, expires at: 1759932341015
+[debug] [2025-10-08T13:11:58.428Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-deploy-001 [none]
+[debug] [2025-10-08T13:11:59.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-deploy-001 200
+[debug] [2025-10-08T13:11:59.140Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-deploy-001 {"projectId":"fir-deploy-001","projectNumber":"531395247001","displayName":"fir-deploy-001","name":"projects/fir-deploy-001","resources":{"hostingSite":"fir-deploy-001"},"state":"ACTIVE","etag":"1_fde643e1-5ff9-4810-9a72-e719fe61a8db"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
